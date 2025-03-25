@@ -13,6 +13,12 @@ namespace RestaurantBooking.Web.Controllers
             _logger = logger;
         }
 
+
+        public IActionResult AnAction()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
