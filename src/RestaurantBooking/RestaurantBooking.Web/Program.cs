@@ -2,8 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using RestaurantBooking.Web.Data;
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddDbContext<RestaurantBookingDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("RestaurantBookingDbContext") ?? throw new InvalidOperationException("Connection string 'RestaurantBookingDbContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RestaurantBookingDbContext") ));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
